@@ -35,16 +35,19 @@ const api = {
             user: logged_user,
         } : {authenticated: false});
     },
-    add_todo(newtask){
-        return mockasync({description: newtask, done: false});
+    add_nota(data){
+        return mockasync(data);
     },
-    list_todos(){
-        return mockasync({
-            todos: [
-                {description: 'Do the laundry', done: true},
-                {description: 'Walk the dog', done: false}
-            ]
-        });
+    list_notas(){
+      return mockasync({
+          notas: [
+              {titulo: 'Titulo 1', texto: 'Texto 1'},
+              {titulo: 'Titulo 2', texto: 'Texto 2'}
+          ]
+      });
+    },
+    delete_nota(id_nota){
+      return mockasync(id_nota)
     }
 };
 

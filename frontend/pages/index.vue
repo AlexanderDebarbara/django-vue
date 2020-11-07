@@ -1,12 +1,16 @@
 <template>
-  <v-layout justify-center align-center>
-    <v-btn color="success" :to="{name: 'todos'}">What o my god next?</v-btn>
-  </v-layout>
+    <notas-list/>
 </template>
 
 <script>
+import notasList from '~/components/notas-list.vue'
+import Vuex from 'vuex'
 
 export default {
+  layout: 'complex',
+  components: {
+    notasList
+  },
   data () {
     return {}
   }

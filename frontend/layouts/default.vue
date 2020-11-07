@@ -1,13 +1,10 @@
 <template>
   <v-app id="inspire">
-    <toolbar :state="layout"/>
-    <sidenav-left :state="layout"/>
     <v-content>
       <v-container fluid>
         <nuxt></nuxt>
       </v-container>
     </v-content>
-    <le-footer/>
     <v-snackbar
       :timeout="snack.timeout"
       :color="snack.color"
